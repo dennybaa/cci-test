@@ -8,6 +8,7 @@ dependencies:
     - ~/.cache/pip
   pre:
     - id
+    - pip --version
     - find ~/.cache/pip
     #- "sudo -H pip install --upgrade setuptools requests[security]"
     - sudo -H pip install docker-compose
