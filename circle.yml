@@ -10,6 +10,7 @@ dependencies:
     - env
     - pip --version
     - sudo chown -R ubuntu.ubuntu ~/.cache/pip
+    - ls -ld /home/ubuntu/.cache/pip/http
     - find ~/.cache/pip
     #- "sudo -H pip install --upgrade setuptools requests[security]"
     - sudo -H pip install --cache-dir ~/.cache/pip docker-compose
