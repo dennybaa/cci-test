@@ -7,8 +7,9 @@ machine:
 
 dependencies:
   pre:
+    - id
     - find ~/.cache/pip
-    - pip install docker-compose
+    - sudo -H pip install docker-compose
     - find ~/.cache/pip
 
 
