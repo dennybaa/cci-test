@@ -11,8 +11,8 @@ dependencies:
     - pip --version
     - find ~/.cache/pip
     #- "sudo -H pip install --upgrade setuptools requests[security]"
-    - sudo -H pip install docker-compose
-    - sudo find /root/.cache/pip
+    - pip install docker-compose
+    - find ~/.cache/pip
 
 
 test:
