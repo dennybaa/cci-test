@@ -1,6 +1,6 @@
 machine:
   python:
-    version: 2.7
+    version: 2.7.10
   services:
     - docker
 
@@ -11,7 +11,8 @@ dependencies:
   pre:
     - id
     - find ~/.cache/pip
-    - "sudo -H pip install --upgrade virtualenv requests[security] docker-compose"
+    - "sudo -H pip install --upgrade virtualenv requests[security]"
+    - sudo -H pip install docker-compose
     - find ~/.cache/pip
 
 
