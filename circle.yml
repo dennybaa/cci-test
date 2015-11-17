@@ -5,6 +5,14 @@ machine:
     - docker
 
 
+dependencies:
+  pre:
+    - find ~/.cache/pip
+    - pip install docker-compose
+    - find ~/.cache/pip
+
+
 test:
   post:
     - docker --version
+    - docker-compose --version
