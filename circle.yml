@@ -1,6 +1,8 @@
 machine:
   services:
     - docker
+  post:
+    - "rm /home/ubuntu/.pyenv/shims/pip && hash -r"
 
 
 dependencies:
@@ -11,7 +13,7 @@ dependencies:
     - which pip
     - pip --version
     - "find /root/.cache/pip || true"
-    - sudo -H pip install ~/.cache/pip docker-compose
+    - sudo -H pip install docker-compose
     - find /root/.cache/pip
 
 test:
