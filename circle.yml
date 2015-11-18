@@ -1,6 +1,4 @@
 machine:
-  python:
-    version: 2.7.10
   services:
     - docker
 
@@ -15,7 +13,7 @@ dependencies:
     - ls -ld /home/ubuntu/.cache/pip/http
     - find ~/.cache/pip
     #- "sudo -H pip install --upgrade setuptools requests[security]"
-    - sudo -H pip install --cache-dir ~/.cache/pip docker-compose
+    - sudo -H pip install ~/.cache/pip docker-compose
     - find ~/.cache/pip
 
 
