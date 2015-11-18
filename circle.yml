@@ -5,19 +5,14 @@ machine:
 
 dependencies:
   cache_directories:
-    - ~/.cache/pip
+    - /root/.cache/pip
   pre:
-    - env
-    - pip --version
+    - "rm /home/ubuntu/.pyenv/shims/pip && hash -r"
     - which pip
-    - ls -la ~/
-    # - sudo chown -R ubuntu.ubuntu ~/.cache/pip
-    - ls -ld /home/ubuntu/.cache/pip/http
-    - find ~/.cache/pip
-    #- "sudo -H pip install --upgrade setuptools requests[security]"
+    - pip --version
+    - find /root/.cache/pip
     - sudo -H pip install ~/.cache/pip docker-compose
-    - find ~/.cache/pip
-
+    - find /root/.cache/pip
 
 test:
   post:
