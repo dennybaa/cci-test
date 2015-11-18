@@ -9,8 +9,8 @@ dependencies:
   cache_directories:
     - /root/.cache/pip
   pre:
-    - "rm ~/.pyenv/shims/pip && hash -r && ls -l ~/.pyenv/shims/pip"
-    - "ls -l ~/.pyenv/shims/pip && which pip"
+    - "rm ~/.pyenv/shims/pip && hash -r && ls -l ~/.pyenv/shims/pip || true"
+    - "ls -l ~/.pyenv/shims/pip || true; which pip"
     - pip --version
     - "find /root/.cache/pip || true"
     - sudo -H pip install docker-compose
