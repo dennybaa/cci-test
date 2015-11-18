@@ -10,7 +10,7 @@ dependencies:
     - "rm /home/ubuntu/.pyenv/shims/pip && hash -r"
     - which pip
     - pip --version
-    - find /root/.cache/pip
+    - "find /root/.cache/pip || true"
     - sudo -H pip install ~/.cache/pip docker-compose
     - find /root/.cache/pip
 
