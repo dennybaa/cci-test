@@ -9,6 +9,8 @@ dependencies:
   pre:
     - env
     - pip --version
+    - which pip
+    - ls -la ~/
     # - sudo chown -R ubuntu.ubuntu ~/.cache/pip
     - ls -ld /home/ubuntu/.cache/pip/http
     - find ~/.cache/pip
