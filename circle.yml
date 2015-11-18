@@ -2,14 +2,14 @@ machine:
   services:
     - docker
   post:
-    - "rm /home/ubuntu/.pyenv/shims/pip && hash -r"
+    - "rm ~/.pyenv/shims/pip && hash -r"
 
 
 dependencies:
   cache_directories:
     - /root/.cache/pip
   pre:
-    - "rm /home/ubuntu/.pyenv/shims/pip && hash -r"
+    - "rm ~/.pyenv/shims/pip && hash -r && ls -l ~/.pyenv/shims"
     - which pip
     - pip --version
     - "find /root/.cache/pip || true"
