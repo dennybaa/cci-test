@@ -2,7 +2,7 @@ machine:
   services:
     - docker
   post:
-    - sed -i 's/.*pyenv.*//' ~/.circlerc
+    # - sed -i 's/.*pyenv.*//' ~/.circlerc
     - sudo -H pip install wheel
 
 dependencies:
