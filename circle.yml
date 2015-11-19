@@ -11,9 +11,9 @@ dependencies:
   pre:
     - which pip
     - pip --version
-    - find /root/.cache/pip || true
+    - sudo find /root/.cache/pip || true
     - sudo -H pip install docker-compose
-    - find /root/.cache/pip || true
+    - sudo find /root/.cache/pip || true
 
 test:
   post:
