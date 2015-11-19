@@ -2,17 +2,18 @@ machine:
   services:
     - docker
   post:
-    - "sed -i 's/.*pyenv.*//' ~/.circlerc"
-
+    - sed -i 's/.*pyenv.*//' ~/.circlerc
+    - sudo -H pip install wheel
 
 dependencies:
   cache_directories:
     - /root/.cache/pip
   pre:
+    - which pip
     - pip --version
-    - "find /root/.cache/pip || true"
+    - find /root/.cache/pip || true
     - sudo -H pip install docker-compose
-    - find /root/.cache/pip
+    - find /root/.cache/pip || true
 
 test:
   post:
