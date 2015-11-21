@@ -4,6 +4,7 @@ machine:
   pre:
     - sudo -H pip install wheel
   post:
+    - sudo mv -f ~/.cache/pip /root/.cache || true
     - sudo find /root/.cache/pip || true
 
 dependencies:
@@ -12,7 +13,6 @@ dependencies:
   pre:
     - sudo -H pip install docker-compose
   post:
-    - sudo mv -f ~/.cache/pip /root/.cache || true
     - find /root/.cache/pip || true
 
 database:
