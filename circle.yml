@@ -6,7 +6,7 @@ machine:
 
 dependencies:
   cache_directories:
-    - /root/.cache/pip
+    - ~/.cache/pip
   pre:
     - sudo -H pip install docker-compose
   post:
@@ -14,8 +14,8 @@ dependencies:
 
 database:
   pre:
-    - sudo chown -R ubuntu.ubuntu /root/.cache/pip
-    - sudo find /root/.cache/pip || true
+    - sudo mv /root/.cache/pip ~/.cache/pip
+    - sudo find ~/.cache/pip || true
 
 test:
   post:
