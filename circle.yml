@@ -12,6 +12,10 @@ dependencies:
   post:
     - sudo find /root/.cache/pip || true
 
+database:
+  post:
+    - sudo find /root/.cache/pip || true
+
 test:
   post:
     - docker-compose version
