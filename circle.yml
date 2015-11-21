@@ -6,7 +6,7 @@ machine:
 
 dependencies:
   cache_directories:
-    - /root/.cache/pip
+    - ~/.cache/pip
   pre:
     - sudo -H pip install docker-compose
   post:
