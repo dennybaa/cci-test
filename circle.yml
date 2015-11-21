@@ -4,7 +4,7 @@ machine:
   pre:
     - sudo -H pip install wheel
   post:
-    - find /root/.cache/pip || true
+    - sudo find /root/.cache/pip || true
 
 dependencies:
   cache_directories:
