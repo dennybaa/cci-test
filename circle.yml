@@ -1,9 +1,9 @@
 machine:
   services:
     - docker
-  post:
-    # - sed -i 's/.*pyenv.*//' ~/.circlerc
-    - sudo -H pip install wheel docker-compose
+  pre:
+    - sudo -H pip install wheel
+    - sudo -H pip install docker-compose
 
 dependencies:
   cache_directories:
