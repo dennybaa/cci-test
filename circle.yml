@@ -2,10 +2,7 @@ machine:
   services:
     - docker
   pre:
-    - sudo -H pip install wheel
-  post:
-    - sudo bash -c "rm -rf /root/.cache/pip; mv -f ~/.cache/pip /root/.cache; true"
-    - sudo find /root/.cache/pip || true
+    - sudo pip install wheel
 
 dependencies:
   cache_directories:
@@ -13,13 +10,7 @@ dependencies:
   pre:
     - sudo -H pip install docker-compose
   post:
-    - find /root/.cache/pip || true
-
-database:
-  pre:
-    - sudo rm -r ~/.cache/pip
-    - sudo mv /root/.cache/pip ~/.cache
-    - sudo find ~/.cache/pip || true
+    - find ~/.cache/pip || true
 
 test:
   post:
