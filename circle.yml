@@ -4,7 +4,7 @@ machine:
   pre:
     - sudo -H pip install wheel
   post:
-    - sudo mv -f ~/.cache/pip /root/.cache || true
+    - sudo bash -c "rm -rf /root/.cache/pip; mv -f ~/.cache/pip /root/.cache; true"
     - sudo find /root/.cache/pip || true
 
 dependencies:
