@@ -14,7 +14,7 @@ dependencies:
 
 database:
   pre:
-    - chown -R ubuntu.ubunut /root/.cache/pip
+    - chown -R ubuntu.ubuntu /root/.cache/pip
     - sudo find /root/.cache/pip || true
 
 test:
