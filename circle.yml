@@ -10,7 +10,7 @@ dependencies:
   pre:
     - sudo -H pip install docker-compose
   post:
-    - sudo find /root/.cache/pip || true
+    - find ~/.cache/pip || true
 
 database:
   post:
