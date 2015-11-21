@@ -16,7 +16,7 @@ dependencies:
 
 database:
   pre:
-    - sudo mv /root/.cache/pip ~/.cache/pip
+    - sudo mv /root/.cache/pip ~/.cache
     - sudo find ~/.cache/pip || true
 
 test:
